@@ -1,6 +1,6 @@
 class Users::OmniauthCallbacksController < ApplicationController
   
-  def facebook
+  def github
     # You need to implement the method below in your model
     @user = User.find_for_github_oauth(env["omniauth.auth"], current_user)
 
