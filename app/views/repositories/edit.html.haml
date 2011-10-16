@@ -1,0 +1,21 @@
+- @title_for_layout = @repository.name
+- @body_class = "repositories"
+- @body_id = "edit_repository"
+
+= form_for(@repository) do |f|
+
+  = render :partial => "shared/flash_notice"
+
+  .box
+    %h2.header= @title_for_layout
+    .content
+    
+      .form_row
+        = f.label :name
+        = f.text_field :name, :class => :textbox
+        
+      .form_row
+        = f.label :personal_description
+        = f.text_area :personal_description, :class => :textbox
+        
+      = f.submit :value => "Update repo information", :class => :action_button

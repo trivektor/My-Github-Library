@@ -4,6 +4,10 @@ body { font-family:arial; font-size:12px; color:#444 }
 
 ul {list-style:none}
 
+h1, h2, h3, h4, h5, h6 { font-weight:normal }
+
+textarea {height:80px}
+
 #home {
   #island {
     width:400px; margin:230px auto 0; text-align:center;
@@ -16,15 +20,15 @@ a { text-decoration:none; outline-style:none }
 
 .action_button {
   background: #0C8DFF;
-    padding: 5px 13px;
+    padding: 8px 15px;
     border: 1px solid #f67b0e;
     border: 1px solid rgba(0, 0, 0, 0.4);
     color: #fff;
     cursor: pointer;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:13px;
     font-weight: bold;
-    line-height: 1.6em;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -32,7 +36,7 @@ a { text-decoration:none; outline-style:none }
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2)));
     background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
     box-shadow: 0 1px 0 0 #9BD3FF inset;
-    height: 30px;
+  display:inline-block;
 }
 
 #header {
@@ -86,22 +90,34 @@ a { text-decoration:none; outline-style:none }
   width:994px; margin:0 auto 20px; background:#eee; padding:3px; border-radius:3px;
   .header {
     background: -moz-linear-gradient(center top, #f5f5f5, #e1e1e1); background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e1e1e1));
-    font-family: georgia; font-size: 17px; color: #555; padding: 8px 15px; border-radius: 4px 4px 0 0; border-left: 1px solid #bbb; border-top: 1px solid #bbb;
+    font-family: georgia; font-size: 17px; color: #555; padding: 14px 25px; border-radius: 4px 4px 0 0; border-left: 1px solid #bbb; border-top: 1px solid #bbb;
     border-right: 1px solid #bbb;
   }
   .content {
-    background:#fff; padding:15px; border:1px solid #bbb; border-radius:0 0 4px 4px;
+    background:#fff; padding:25px; border:1px solid #bbb; border-radius:0 0 4px 4px;
   }
 }
 
 .spinner { display:none }
 
-.vertical_item_list {
+.repos_list {
   li { 
-    padding:10px; border-bottom:1px solid #ccc; 
-    a {color:#555; font-weight:bold}
-    &:nth-child(2n+1) {
-     background:#eee; 
-    }
+    padding:12px; border-bottom:1px solid #e0e0e0; overflow:hidden;
+    a {color:#EA0A89; font-weight:bold}
+    &:nth-child(2n+1) { background:#f4f4f4 }
+    .repo_name { float:left }
+    .edit_repo { float:right; background:url(/assets/pencil_16.png) no-repeat; width:16px; height:16px; display:block; text-indent:-9999px }
   }
+}
+
+.form_row {
+  margin-bottom:20px; 
+  label { display:block; margin-bottom:8px; font-size:14px;  }
+}
+
+.textbox { padding:10px; border-radius:4px; border:1px solid #bbb; box-shadow:0 2px 3px 1px #ddd inset; width:500px }
+
+.flash_notice { 
+  background:url(/assets/check_16.gif) no-repeat 15px 15px; padding:15px 15px 15px; font-size:19px; width:966px; 
+  margin:10px auto 20px; color:#7ba81b; text-indent:32px; box-shadow:0 1px 8px 0 #ccc; border-radius:4px;
 }

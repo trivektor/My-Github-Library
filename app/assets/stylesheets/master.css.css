@@ -10,6 +10,12 @@ body {
 ul {
   list-style: none; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+textarea {
+  height: 80px; }
+
 #home #island {
   width: 400px;
   margin: 230px auto 0;
@@ -24,15 +30,15 @@ a {
 
 .action_button {
   background: #0C8DFF;
-  padding: 5px 13px;
+  padding: 8px 15px;
   border: 1px solid #f67b0e;
   border: 1px solid rgba(0, 0, 0, 0.4);
   color: #fff;
   cursor: pointer;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
   font-weight: bold;
-  line-height: 1.6em;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -40,7 +46,7 @@ a {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2)));
   background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
   box-shadow: 0 1px 0 0 #9BD3FF inset;
-  height: 30px; }
+  display: inline-block; }
 
 #header {
   margin: 0 0 40px;
@@ -126,25 +132,60 @@ a {
     font-family: georgia;
     font-size: 17px;
     color: #555;
-    padding: 8px 15px;
+    padding: 14px 25px;
     border-radius: 4px 4px 0 0;
     border-left: 1px solid #bbb;
     border-top: 1px solid #bbb;
     border-right: 1px solid #bbb; }
   .box .content {
     background: #fff;
-    padding: 15px;
+    padding: 25px;
     border: 1px solid #bbb;
     border-radius: 0 0 4px 4px; }
 
 .spinner {
   display: none; }
 
-.vertical_item_list li {
-  padding: 10px;
-  border-bottom: 1px solid #ccc; }
-  .vertical_item_list li a {
-    color: #555;
+.repos_list li {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  overflow: hidden; }
+  .repos_list li a {
+    color: #EA0A89;
     font-weight: bold; }
-  .vertical_item_list li:nth-child(2n+1) {
-    background: #eee; }
+  .repos_list li:nth-child(2n+1) {
+    background: #f4f4f4; }
+  .repos_list li .repo_name {
+    float: left; }
+  .repos_list li .edit_repo {
+    float: right;
+    background: url(/assets/pencil_16.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    text-indent: -9999px; }
+
+.form_row {
+  margin-bottom: 20px; }
+  .form_row label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px; }
+
+.textbox {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  box-shadow: 0 2px 3px 1px #ddd inset;
+  width: 500px; }
+
+.flash_notice {
+  background: url(/assets/check_16.gif) no-repeat 15px 15px;
+  padding: 15px 15px 15px;
+  font-size: 19px;
+  width: 966px;
+  margin: 10px auto 20px;
+  color: #7ba81b;
+  text-indent: 32px;
+  box-shadow: 0 1px 8px 0 #ccc;
+  border-radius: 4px; }

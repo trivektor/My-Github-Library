@@ -5,7 +5,8 @@
 .box
   .header Your watched repositories on Github
   .content
-    %ul.vertical_item_list
+    %ul.repos_list
       - @repositories.each do |r|
         %li
-          = link_to r.name, edit_repository_path(r)
+          = link_to r.name, edit_repository_path(r), :class => :repo_name
+          = link_to "Edit", edit_repository_path(r), :class => :edit_repo

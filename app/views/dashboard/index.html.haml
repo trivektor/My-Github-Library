@@ -2,7 +2,7 @@
 - @body_id = "dashboard"
 
 .box
-  .header Repos you watch on Github
+  %h2.header= @title_for_layout
   .content
     %a.action_button#sync_github Sync my Github
     = image_tag "ajax-loader.gif", :id => :spinner, :class => :spinner

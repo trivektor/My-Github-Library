@@ -2,6 +2,9 @@ require 'net/http'
 
 class Repository < ActiveRecord::Base
   
+  extend FriendlyId
+  friendly_id :name, :use => :slugged
+  
   def self.sync(user)
     request = Net::HTTP.get(URI.parse("http://github.com/api/v2/json/repos/watched/#{user.username}"))
     repos = JSON::parse(request)
