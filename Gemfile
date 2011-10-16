@@ -8,6 +8,8 @@ gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => '3-1-stable'
 gem 'mysql2'
 
 gem 'haml-rails'
+gem 'uglifier'
+gem 'sass-rails'
 gem 'omniauth'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'gravtastic'
@@ -17,15 +19,6 @@ gem 'activerecord-import'
 gem "friendly_id", "~> 4.0.0.beta14"
 gem 'execjs'
 gem 'therubyracer'
-gem 'uglifier'
-
-# Gems used only for assets and not required
-# in production environments by default.
-# group :assets do
-#   gem 'sass-rails', "  ~> 3.1.0"
-#   gem 'coffee-rails', "~> 3.1.0"
-#   gem 'uglifier'
-# end
 
 gem 'jquery-rails'
 
