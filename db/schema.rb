@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111016151211) do
+ActiveRecord::Schema.define(:version => 20111016162857) do
 
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"
@@ -27,6 +27,28 @@ ActiveRecord::Schema.define(:version => 20111016151211) do
     t.integer  "followers"
     t.string   "blog"
     t.string   "github_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "repositories", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.text     "description"
+    t.text     "personal_description"
+    t.string   "owner"
+    t.boolean  "has_wiki"
+    t.datetime "created_date"
+    t.integer  "forks"
+    t.string   "homepage"
+    t.string   "language"
+    t.integer  "watchers"
+    t.datetime "pushed_at"
+    t.boolean  "has_downloads"
+    t.string   "url"
+    t.boolean  "fork"
+    t.integer  "size"
+    t.boolean  "private"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

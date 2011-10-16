@@ -8,6 +8,12 @@ MyGithubLibrary::Application.routes.draw do
   
   resources :users
   
+  resources :repositories do
+    collection do
+      post :sync
+    end
+  end
+  
   root :to => "home#index"
   
 end

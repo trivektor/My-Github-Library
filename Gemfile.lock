@@ -61,7 +61,6 @@ GEM
       multi_json (~> 1.0)
     addressable (2.2.6)
     ansi (1.3.0)
-    api_cache (0.2.3)
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
@@ -90,9 +89,6 @@ GEM
       haml (~> 3.0)
       railties (~> 3.0)
     hike (1.2.1)
-    httparty (0.8.1)
-      multi_json
-      multi_xml
     i18n (0.6.0)
     jquery-rails (1.0.16)
       railties (~> 3.0)
@@ -106,18 +102,11 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mechanize (2.0.1)
-      net-http-digest_auth (~> 1.1, >= 1.1.1)
-      net-http-persistent (~> 1.8)
-      nokogiri (~> 1.4)
-      webrobots (~> 0.0, >= 0.0.9)
     mime-types (1.16)
     multi_json (1.0.3)
     multi_xml (0.4.1)
     multipart-post (1.1.3)
     mysql2 (0.3.7)
-    net-http-digest_auth (1.1.1)
-    net-http-persistent (1.9)
     net-ldap (0.2.2)
     nokogiri (1.5.0)
     oa-basic (0.3.0)
@@ -152,11 +141,6 @@ GEM
     oauth2 (0.5.1)
       faraday (~> 0.7.4)
       multi_json (~> 1.0.3)
-    octopi (0.4.5)
-      api_cache
-      httparty (>= 0.4.5)
-      mechanize (>= 0.9.3)
-      nokogiri (>= 1.3.1)
     omniauth (0.3.0)
       oa-basic (= 0.3.0)
       oa-core (= 0.3.0)
@@ -243,8 +227,6 @@ GEM
       macaddr (~> 1.0)
     warden (1.0.6)
       rack (>= 1.0)
-    webrobots (0.0.12)
-      nokogiri (>= 1.4.4)
     will_paginate (3.0.2)
 
 PLATFORMS
@@ -259,7 +241,6 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   mysql2
-  octopi
   omniauth
   pg
   rails (= 3.1.0)
