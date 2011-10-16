@@ -18,6 +18,10 @@ textarea {height:80px}
 
 a { text-decoration:none; outline-style:none }
 
+.clearfix:after {
+  content: "."; display: block; clear: both; visibility: hidden; line-height: 0;height: 0;
+}
+
 .action_button {
   background: #0C8DFF;
     padding: 8px 15px;
@@ -40,16 +44,16 @@ a { text-decoration:none; outline-style:none }
 }
 
 #header {
-  margin:0 0 40px; background:#ffe75f url(/assets/header_bg.jpg) repeat-x left bottom; border-bottom:1px solid #aa8800; height:62px;
+  margin:0 0 40px; background:#ffe75f url(/assets/header_bg.jpg) repeat-x left bottom; border-bottom:1px solid #aa8800;
   #middle_section {
-    width:600px; margin:0 auto;
+    width:700px; margin:0 auto;
     #nav {
       float:right;
       ul {
         li {
-          float:left; list-style:none; text-align:center; margin-left:0px; position:relative;
+          float:left; list-style:none; text-align:center; margin-left:10px; position:relative;
           > a {
-            text-transform:uppercase; color:#fff; text-shadow:0 1px 1px #666; font-weight:bold; font-size:11px; display:block; padding:8px 7px;
+            text-transform:uppercase; color:#fff; text-shadow:0 1px 1px #666; font-weight:bold; font-size:11px; display:block; padding:8px 10px;
             span {margin-top:4px; display:block}
             img {height:24px; max-width:24px}
           }
@@ -87,7 +91,7 @@ a { text-decoration:none; outline-style:none }
 }
 
 .box {
-  width:600px; margin:0 auto 20px; background:#eee; padding:3px; border-radius:3px;
+  width:694px; margin:0 auto 20px; background:#eee; padding:3px; border-radius:3px;
   .header {
     background: -moz-linear-gradient(center top, #f5f5f5, #e1e1e1); background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e1e1e1));
     font-family: georgia; font-size: 17px; color: #555; padding: 14px 25px; border-radius: 4px 4px 0 0; border-left: 1px solid #bbb; border-top: 1px solid #bbb;

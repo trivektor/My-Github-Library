@@ -28,6 +28,14 @@ a {
   text-decoration: none;
   outline-style: none; }
 
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
 .action_button {
   background: #0C8DFF;
   padding: 8px 15px;
@@ -51,10 +59,9 @@ a {
 #header {
   margin: 0 0 40px;
   background: #ffe75f url(/assets/header_bg.jpg) repeat-x left bottom;
-  border-bottom: 1px solid #aa8800;
-  height: 62px; }
+  border-bottom: 1px solid #aa8800; }
   #header #middle_section {
-    width: 600px;
+    width: 700px;
     margin: 0 auto; }
     #header #middle_section #nav {
       float: right; }
@@ -62,7 +69,7 @@ a {
         float: left;
         list-style: none;
         text-align: center;
-        margin-left: 0px;
+        margin-left: 10px;
         position: relative; }
         #header #middle_section #nav ul li > a {
           text-transform: uppercase;
@@ -71,7 +78,7 @@ a {
           font-weight: bold;
           font-size: 11px;
           display: block;
-          padding: 8px 7px; }
+          padding: 8px 10px; }
           #header #middle_section #nav ul li > a span {
             margin-top: 4px;
             display: block; }
@@ -121,7 +128,7 @@ a {
     margin-top: 11px; }
 
 .box {
-  width: 600px;
+  width: 694px;
   margin: 0 auto 20px;
   background: #eee;
   padding: 3px;

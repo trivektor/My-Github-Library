@@ -14,6 +14,8 @@ MyGithubLibrary::Application.routes.draw do
     end
   end
   
+  resources :tags
+  
   root :to => "home#index"
   
 end

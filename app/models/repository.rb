@@ -5,6 +5,8 @@ class Repository < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, :use => :slugged
   
+  has_and_belongs_to_many :tags
+  
   validates_uniqueness_of :name
   
   def self.sync(user)
