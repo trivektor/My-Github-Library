@@ -11,6 +11,8 @@ gem 'haml-rails'
 gem 'omniauth'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'gravtastic'
+gem 'github'
+gem 'will_paginate'
 
 gem 'execjs'
 gem 'therubyracer'
