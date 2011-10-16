@@ -156,7 +156,9 @@ a {
   .repos_list li:nth-child(2n+1) {
     background: #f4f4f4; }
   .repos_list li .repo_name {
-    float: left; }
+    float: left;
+    display: block;
+    margin-top: 2px; }
   .repos_list li .edit_repo {
     float: right;
     background: url(/assets/pencil_16.png) no-repeat;

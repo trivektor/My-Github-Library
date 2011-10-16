@@ -103,9 +103,9 @@ a { text-decoration:none; outline-style:none }
 .repos_list {
   li { 
     padding:12px; border-bottom:1px solid #e0e0e0; overflow:hidden;
-    a {color:#EA0A89; font-weight:bold}
+    a {color:#EA0A89; font-weight:bold }
     &:nth-child(2n+1) { background:#f4f4f4 }
-    .repo_name { float:left }
+    .repo_name { float:left; display:block; margin-top:2px }
     .edit_repo { float:right; background:url(/assets/pencil_16.png) no-repeat; width:16px; height:16px; display:block; text-indent:-9999px }
   }
 }
