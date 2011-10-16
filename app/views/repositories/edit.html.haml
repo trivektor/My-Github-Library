@@ -18,4 +18,8 @@
         = f.label :personal_description
         = f.text_area :personal_description, :class => :textbox
         
+      .form_row
+        %label Tags
+        %input{:type => :text, :class => :textbox}
+        
       = f.submit :value => "Update repo information", :class => :action_button

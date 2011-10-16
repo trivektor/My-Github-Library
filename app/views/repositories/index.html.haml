@@ -10,3 +10,4 @@
         %li
           = link_to r.name, edit_repository_path(r), :class => :repo_name
           = link_to "Edit", edit_repository_path(r), :class => :edit_repo
+          %a{:href => r.url, :target => "_blank", :class => :repo_github_url}
