@@ -6,6 +6,14 @@
   .content
     %a.action_button#sync_github Sync my Github
     = image_tag "ajax-loader.gif", :id => :spinner, :class => :spinner
+
+:javascript
+
+  $(function() {
+    var repositories = new Repositories
     
-= content_for :head do
-  = javascript_include_tag "collections/repositories.js", "views/githubSyncView.js", "dashboard.js"
+    var githubSyncView = new GithubSyncView({
+      collection: repositories
+    })
+  })
+  

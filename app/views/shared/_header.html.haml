@@ -21,7 +21,7 @@
               %span Repositories
               
           %li
-            = link_to destroy_user_session_path, :method => :delete do
+            = link_to destroy_user_session_path, :method => :delete, :remote => true do
               = image_tag "signout_24.png"
               %span Logout
     
