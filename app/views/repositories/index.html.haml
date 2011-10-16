@@ -1,0 +1,11 @@
+- @title_for_layout = "Repositories"
+- @body_class = "repositories"
+- @body_id = "repositories"
+
+.box
+  .header Your watched repositories on Github
+  .content
+    %ul.vertical_item_list
+      - @repositories.each do |r|
+        %li
+          = link_to r.name, edit_repository_path(r)

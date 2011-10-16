@@ -13,6 +13,7 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'gravtastic'
 gem 'will_paginate'
 gem 'gravtastic'
+gem 'activerecord-import'
 gem 'execjs'
 gem 'therubyracer'
 

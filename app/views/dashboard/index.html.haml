@@ -1,10 +1,11 @@
 - @title_for_layout = "Dashboard"
 - @body_id = "dashboard"
 
-#main_pane
+.box
   .header Repos you watch on Github
   .content
     %a.action_button#sync_github Sync my Github
+    = image_tag "ajax-loader.gif", :id => :spinner, :class => :spinner
     
 = content_for :head do
   = javascript_include_tag "collections/repositories.js", "views/githubSyncView.js", "dashboard.js"

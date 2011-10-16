@@ -1,8 +1,8 @@
 * { padding:0; margin:0 }
 
-body {
-  font-family:arial; font-size:12px; color:#444;
-}
+body { font-family:arial; font-size:12px; color:#444 }
+
+ul {list-style:none}
 
 #home {
   #island {
@@ -82,8 +82,8 @@ a { text-decoration:none; outline-style:none }
   }
 }
 
-#main_pane {
-  width:500px; margin:100px auto; background:#eee; padding:3px; border-radius:3px;
+.box {
+  width:994px; margin:0 auto 20px; background:#eee; padding:3px; border-radius:3px;
   .header {
     background: -moz-linear-gradient(center top, #f5f5f5, #e1e1e1); background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e1e1e1));
     font-family: georgia; font-size: 17px; color: #555; padding: 8px 15px; border-radius: 4px 4px 0 0; border-left: 1px solid #bbb; border-top: 1px solid #bbb;
@@ -91,5 +91,17 @@ a { text-decoration:none; outline-style:none }
   }
   .content {
     background:#fff; padding:15px; border:1px solid #bbb; border-radius:0 0 4px 4px;
+  }
+}
+
+.spinner { display:none }
+
+.vertical_item_list {
+  li { 
+    padding:10px; border-bottom:1px solid #ccc; 
+    a {color:#555; font-weight:bold}
+    &:nth-child(2n+1) {
+     background:#eee; 
+    }
   }
 }

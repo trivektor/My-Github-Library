@@ -14,7 +14,12 @@
             = link_to dashboard_path do
               = image_tag "dash_24.png"
               %span Dashboard
-        
+              
+          %li{:class => @body_class == "repositories" ? "current" : ""}
+            = link_to repositories_path do
+              = image_tag "git_24.png"
+              %span Repositories
+              
           %li
             = link_to destroy_user_session_path, :method => :delete do
               = image_tag "signout_24.png"
