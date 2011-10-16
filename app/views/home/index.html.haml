@@ -4,4 +4,4 @@
 #island
   = image_tag "logo.png", :id => :logo
   
-  %a.action_button Sign in with Github
+  = link_to "Sign in with Github", user_omniauth_authorize_path(:github), :class => :action_button

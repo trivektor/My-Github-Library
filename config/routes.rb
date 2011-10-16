@@ -6,6 +6,8 @@ MyGithubLibrary::Application.routes.draw do
 
   match "/dashboard" => "dashboard#index", :as => :dashboard
   
+  resources :users
+  
   root :to => "home#index"
   
 end

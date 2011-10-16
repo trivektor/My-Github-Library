@@ -12,6 +12,8 @@ gem 'omniauth'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'gravtastic'
 
+gem 'execjs'
+gem 'therubyracer'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -38,4 +40,9 @@ group :test, :development do
   gem 'spork'
   gem 'rspec-rails', :git => 'git://github.com/rspec/rspec-rails.git'
   gem 'factory_girl_rails', :git => 'git://github.com/thoughtbot/factory_girl_rails.git'
+end
+
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'pg'
 end
