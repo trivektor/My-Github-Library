@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   gravtastic
          
   has_one :profile
+  has_many :repositories
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username

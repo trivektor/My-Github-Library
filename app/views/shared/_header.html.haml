@@ -1,17 +1,23 @@
-%header#header
-  #middle_section
-    = image_tag "logo.png", :id => :logo
+- if user_signed_in?
+  %header#header
+    #middle_section
+      = image_tag "logo.png", :id => :logo
     
-    %nav#nav
-      %ul
-        %li
-          %a
-            = image_tag current_user.gravatar_url, :id => :nav_profile_photo
-            %span= current_user.username
+      %nav#nav
+        %ul
+          %li
+            %a
+              = image_tag current_user.gravatar_url, :id => :nav_profile_photo
+              %span= current_user.username
             
-        %li{:class => @body_id == "dashboard" ? "current" : ""}
-          = link_to dashboard_path do
-            = image_tag "dash_24.png"
-            %span Dashboard
+          %li{:class => @body_id == "dashboard" ? "current" : ""}
+            = link_to dashboard_path do
+              = image_tag "dash_24.png"
+              %span Dashboard
+        
+          %li
+            = link_to destroy_user_session_path, :method => :delete do
+              = image_tag "signout_24.png"
+              %span Logout
     
   
