@@ -10,7 +10,7 @@ MyGithubLibrary::Application.routes.draw do
   
   resources :repositories do
     collection do
-      post :sync
+      get :sync
     end
   end
   

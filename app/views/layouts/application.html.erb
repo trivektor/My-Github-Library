@@ -3,7 +3,8 @@
 <head>
   <title><%= @title_for_layout %> - My Github Library</title>
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "underscore.js", "backbone.js" %>
+  <%= javascript_include_tag "jquery.js", "underscore.js", "backbone.js" %>
+  <%= yield :head %>
   <%= csrf_meta_tags %>
 </head>
 <body id="<%= @body_id %>">
