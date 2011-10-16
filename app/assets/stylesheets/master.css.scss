@@ -1,0 +1,30 @@
+* { padding:0; margin:0 }
+
+#home {
+  #island {
+    width:400px; margin:230px auto 0; text-align:center;
+    
+    #logo {display:block; margin:0 auto 20px}
+  }
+}
+
+.action_button {
+  background: #0C8DFF;
+    padding: 5px 13px;
+    border: 1px solid #f67b0e;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.6em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2)));
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    box-shadow: 0 1px 0 0 #9BD3FF inset;
+    height: 30px;
+}
