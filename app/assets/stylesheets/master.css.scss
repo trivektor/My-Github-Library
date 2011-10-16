@@ -37,6 +37,53 @@ a {
     height: 30px;
 }
 
+#header {
+  margin:0 0 40px; background:#ffe75f url(/assets/header_bg.jpg) repeat-x left bottom; border-bottom:1px solid #aa8800; height:62px;
+  #middle_section {
+    width:1000px; margin:0 auto;
+    #nav {
+      float:right;
+      ul {
+        li {
+          float:left; list-style:none; text-align:center; margin-left:15px; position:relative;
+          > a {
+            text-transform:uppercase; color:#fff; text-shadow:0 1px 1px #666; font-weight:bold; display:block; padding:8px 10px;
+            span {margin-top:4px; display:block}
+            img {height:24px; max-width:24px}
+          }
+          .leaf_menu_wrapper {
+            display:none; position:absolute; width:120px; top:52px; left:-32px; z-index:300; background:url(/assets/arrow_tip.png) no-repeat 49px 0; padding-top:5px;
+            .leaf_menu {
+              text-align:left; border-radius:5px; background:#fff; box-shadow:0px 5px 5px -1px #777; z-index:200; border:3px solid #333;
+              a {
+                padding:8px 12px; display:block;color:#777; border-bottom:1px dotted #ccc;
+                &:hover {
+                  background:#eee
+                }
+              }
+            }
+          }
+          
+          &:hover {
+            .leaf_menu_wrapper { display:block }
+          }
+        }
+        li.current {
+          background:#ffe57f url(/assets/shine.png) no-repeat bottom center; border-left:1px solid #e1b507; border-right:1px solid #e1b507;
+          a {
+            border-left:1px solid #fbffd3; border-right:1px solid #fbffd3
+          }
+        }
+      }
+      #nav_profile_photo {width:22px; height:22px; background:#fff; padding:1px; box-shadow:0 1px 3px 0 #666}
+    }
+  }
+
+  #logo {
+    float:left; height:47px; margin-top:8px;
+  }
+}
+
 #main_pane {
   width:500px; margin:100px auto; background:#eee; padding:3px; border-radius:3px;
   .header {

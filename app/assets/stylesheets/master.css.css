@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: arial;
+  font-size: 12px;
+  color: #444; }
+
+#home #island {
+  width: 400px;
+  margin: 230px auto 0;
+  text-align: center; }
+  #home #island #logo {
+    display: block;
+    margin: 0 auto 20px; }
+
+a {
+  text-decoration: none; }
+
+.action_button {
+  background: #0C8DFF;
+  padding: 5px 13px;
+  border: 1px solid #f67b0e;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1.6em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2)));
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+  box-shadow: 0 1px 0 0 #9BD3FF inset;
+  height: 30px; }
+
+#header {
+  margin: 0 0 40px;
+  background: #ffe75f url(/assets/header_bg.jpg) repeat-x left bottom;
+  border-bottom: 1px solid #aa8800;
+  height: 62px; }
+  #header #middle_section {
+    width: 1000px;
+    margin: 0 auto; }
+    #header #middle_section #nav {
+      float: right; }
+      #header #middle_section #nav ul li {
+        float: left;
+        list-style: none;
+        text-align: center;
+        margin-left: 15px;
+        position: relative; }
+        #header #middle_section #nav ul li > a {
+          text-transform: uppercase;
+          color: #fff;
+          text-shadow: 0 1px 1px #666;
+          font-weight: bold;
+          display: block;
+          padding: 8px 10px; }
+          #header #middle_section #nav ul li > a span {
+            margin-top: 4px;
+            display: block; }
+          #header #middle_section #nav ul li > a img {
+            height: 24px;
+            max-width: 24px; }
+        #header #middle_section #nav ul li .leaf_menu_wrapper {
+          display: none;
+          position: absolute;
+          width: 120px;
+          top: 52px;
+          left: -32px;
+          z-index: 300;
+          background: url(/assets/arrow_tip.png) no-repeat 49px 0;
+          padding-top: 5px; }
+          #header #middle_section #nav ul li .leaf_menu_wrapper .leaf_menu {
+            text-align: left;
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0px 5px 5px -1px #777777;
+            z-index: 200;
+            border: 3px solid #333; }
+            #header #middle_section #nav ul li .leaf_menu_wrapper .leaf_menu a {
+              padding: 8px 12px;
+              display: block;
+              color: #777;
+              border-bottom: 1px dotted #ccc; }
+              #header #middle_section #nav ul li .leaf_menu_wrapper .leaf_menu a:hover {
+                background: #eee; }
+        #header #middle_section #nav ul li:hover .leaf_menu_wrapper {
+          display: block; }
+      #header #middle_section #nav ul li.current {
+        background: #ffe57f url(/assets/shine.png) no-repeat bottom center;
+        border-left: 1px solid #e1b507;
+        border-right: 1px solid #e1b507; }
+        #header #middle_section #nav ul li.current a {
+          border-left: 1px solid #fbffd3;
+          border-right: 1px solid #fbffd3; }
+      #header #middle_section #nav #nav_profile_photo {
+        width: 22px;
+        height: 22px;
+        background: #fff;
+        padding: 1px;
+        box-shadow: 0 1px 3px 0 #666; }
+  #header #logo {
+    float: left;
+    height: 47px;
+    margin-top: 8px; }
+
+#main_pane {
+  width: 500px;
+  margin: 100px auto;
+  background: #eee;
+  padding: 3px;
+  border-radius: 3px; }
+  #main_pane .header {
+    background: -moz-linear-gradient(center top, #f5f5f5, #e1e1e1);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e1e1e1));
+    font-family: georgia;
+    font-size: 17px;
+    color: #555;
+    padding: 8px 15px;
+    border-radius: 4px 4px 0 0;
+    border-left: 1px solid #bbb;
+    border-top: 1px solid #bbb;
+    border-right: 1px solid #bbb; }
+  #main_pane .content {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #bbb;
+    border-radius: 0 0 4px 4px; }

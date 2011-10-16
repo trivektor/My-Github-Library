@@ -8,7 +8,11 @@
 </head>
 <body id="<%= @body_id %>">
 
+<%= render :partial => "shared/header" %>  
+
 <%= yield %>
+
+<%= render :partial => "shared/footer" %>  
 
 </body>
 </html>
