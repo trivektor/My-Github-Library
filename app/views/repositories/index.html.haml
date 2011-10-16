@@ -3,7 +3,7 @@
 - @body_id = "repositories"
 
 .box
-  .header Your watched repositories on Github
+  .header Your watched repositories on Github (#{@repositories.count})
   .content
     %ul.repos_list
       - @repositories.each do |r|
