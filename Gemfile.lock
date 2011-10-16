@@ -233,6 +233,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-import
   devise!
+  execjs
   factory_girl_rails!
   friendly_id (~> 4.0.0.beta14)
   gravtastic

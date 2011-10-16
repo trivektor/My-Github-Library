@@ -17,6 +17,7 @@ gem 'will_paginate'
 gem 'gravtastic'
 gem 'activerecord-import'
 gem "friendly_id", "~> 4.0.0.beta14"
+gem 'execjs'
 
 gem 'jquery-rails'
 
