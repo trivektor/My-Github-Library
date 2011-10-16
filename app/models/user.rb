@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
          
+  include Gravtastic
+  gravtastic
+         
   has_one :profile
 
   # Setup accessible (or protected) attributes for your model

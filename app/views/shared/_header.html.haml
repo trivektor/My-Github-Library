@@ -5,7 +5,11 @@
     %nav#nav
       %ul
         %li
-        %li
+          %a
+            = image_tag current_user.gravatar_url, :id => :nav_profile_photo
+            %span= current_user.username
+            
+        %li{:class => @body_id == "dashboard" ? "current" : ""}
           = link_to dashboard_path do
             = image_tag "dash_24.png"
             %span Dashboard

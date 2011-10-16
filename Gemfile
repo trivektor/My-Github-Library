@@ -13,7 +13,7 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'gravtastic'
 gem 'octopi'
 gem 'will_paginate'
-
+gem 'gravtastic'
 gem 'execjs'
 gem 'therubyracer'
 
