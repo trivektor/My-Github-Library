@@ -1,7 +1,6 @@
 $(function() {
   
   window.GithubSyncView = Backbone.View.extend({
-    el: $("#dashboard"),
     initialize: function() {
       this.setupSelectors();
       this.collection.bind("add", this.updateSyncStatus, this);
@@ -19,6 +18,7 @@ $(function() {
     updateSyncStatus: function() {
       this.hideSpinner();
       alert("Your repositories have been synched");
+      window.location.href = window.location.href
     },
     hideSpinner: function() {
       this.spinner.hide();

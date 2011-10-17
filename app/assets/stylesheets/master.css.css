@@ -73,14 +73,14 @@ a {
         float: left;
         list-style: none;
         text-align: center;
-        margin-left: 10px;
+        margin-left: 12px;
         position: relative; }
         #header #middle_section #nav ul li > a {
           text-transform: uppercase;
           color: #fff;
           text-shadow: 0 1px 1px #666;
           font-weight: bold;
-          font-size: 11px;
+          font-size: 12px;
           display: block;
           padding: 8px 10px; }
           #header #middle_section #nav ul li > a span {
@@ -129,7 +129,7 @@ a {
         box-shadow: 0 1px 3px 0 #666; }
   #header #logo {
     float: left;
-    margin-top: 11px; }
+    margin-top: 9px; }
 
 #footer {
   text-align: center;

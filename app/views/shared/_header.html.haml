@@ -10,7 +10,7 @@
               = image_tag current_user.gravatar_url, :id => :nav_profile_photo
               %span= current_user.username.truncate(8)
             
-          %li{:class => @body_id == "dashboard" ? "current" : ""}
+          %li{:class => @body_id == "dashboard" ? "current" : "", :style => "display:none"}
             = link_to dashboard_path do
               = image_tag "dash_24.png"
               %span Dashboard

@@ -56,13 +56,13 @@ ActiveRecord::Schema.define(:version => 20111016221447) do
 
   add_index "repositories", ["slug"], :name => "index_repositories_on_slug", :unique => true
 
-  create_table "repositories_tag", :force => true do |t|
+  create_table "repositories_tags", :id => false, :force => true do |t|
     t.integer "repository_id"
     t.integer "tag_id"
   end
 
-  add_index "repositories_tag", ["repository_id"], :name => "index_repositories_tag_on_repository_id"
-  add_index "repositories_tag", ["tag_id"], :name => "index_repositories_tag_on_tag_id"
+  add_index "repositories_tags", ["repository_id"], :name => "index_repositories_tags_on_repository_id"
+  add_index "repositories_tags", ["tag_id"], :name => "index_repositories_tags_on_tag_id"
 
   create_table "tags", :force => true do |t|
     t.string   "name"

@@ -53,9 +53,9 @@ a { text-decoration:none; outline-style:none; color:#EA0A89 }
       float:right;
       ul {
         li {
-          float:left; list-style:none; text-align:center; margin-left:10px; position:relative;
+          float:left; list-style:none; text-align:center; margin-left:12px; position:relative;
           > a {
-            text-transform:uppercase; color:#fff; text-shadow:0 1px 1px #666; font-weight:bold; font-size:11px; display:block; padding:8px 10px;
+            text-transform:uppercase; color:#fff; text-shadow:0 1px 1px #666; font-weight:bold; font-size:12px; display:block; padding:8px 10px;
             span {margin-top:4px; display:block}
             img {height:24px; max-width:24px}
           }
@@ -88,7 +88,7 @@ a { text-decoration:none; outline-style:none; color:#EA0A89 }
   }
 
   #logo {
-    float:left; margin-top:11px;
+    float:left; margin-top:9px;
   }
 }
 
