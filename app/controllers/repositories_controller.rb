@@ -1,7 +1,7 @@
 class RepositoriesController < ApplicationController
   
   before_filter :authenticate_user!
-  before_filter :find_repo, :only => [:edit, :update]
+  before_filter :find_repo, :only => [:edit, :update, :show]
   
   def sync
     Repository.sync(current_user)
@@ -34,6 +34,9 @@ class RepositoriesController < ApplicationController
     else
       render :action => :edit
     end
+  end
+  
+  def show
   end
   
   private

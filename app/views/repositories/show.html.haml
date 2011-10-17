@@ -1,0 +1,30 @@
+- @title_for_layout = @repository.name
+- @body_class = "repositories"
+- @body_id = "repository_show"
+
+.box
+  %h2.header #{@repository.owner}/#{@repository.name}
+  .content
+    %ul.repo_info_list
+      %li 
+        %b Name:
+        = @repository.name
+      
+      %li 
+        %b Description: 
+        = @repository.description
+        
+      %li
+        %b Size:
+        = (@repository.size/1024.0).round(2)
+        MB
+        
+      %li
+        %b Language:
+        = @repository.language
+        
+      %li
+        %b Owner:
+        %a{:href => "http://github.com/#{@repository.owner}", :style => "color:#555"}= @repository.owner
+        
+    = link_to "Add tags and personal description", edit_repository_path(@repository), :class => :action_button

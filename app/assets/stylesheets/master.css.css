@@ -4,7 +4,7 @@
 
 body {
   font-family: arial;
-  font-size: 12px;
+  font-size: 13px;
   color: #444; }
 
 ul {
@@ -17,6 +17,11 @@ textarea {
   height: 90px !important;
   font-family: arial; }
 
+a {
+  text-decoration: none;
+  outline-style: none;
+  color: #EA0A89; }
+
 #home #island {
   width: 400px;
   margin: 230px auto 0;
@@ -24,10 +29,8 @@ textarea {
   #home #island #logo {
     display: block;
     margin: 0 auto 20px; }
-
-a {
-  text-decoration: none;
-  outline-style: none; }
+#home #header, #home #footer {
+  display: none; }
 
 .clearfix:after {
   content: ".";
@@ -216,3 +219,16 @@ a {
   text-indent: 32px;
   box-shadow: 0 1px 8px 0 #ccc;
   border-radius: 4px; }
+
+#dashboard #footer {
+  display: none; }
+
+.repo_info_list {
+  margin-bottom: 20px; }
+  .repo_info_list li {
+    background: -moz-linear-gradient(center top, white, #eeeeee);
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+    padding: 15px;
+    border-top: 1px solid #ddd; }
+    .repo_info_list li b {
+      color: #EA0A89; }
