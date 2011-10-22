@@ -5,7 +5,8 @@
 body {
   font-family: arial;
   font-size: 13px;
-  color: #444; }
+  color: #444;
+  background: url(/assets/wood.jpg) left center fixed; }
 
 ul {
   list-style: none; }
@@ -24,13 +25,16 @@ a {
 
 #home #island {
   width: 400px;
-  margin: 230px auto 0;
+  margin: 147px auto 0;
   text-align: center; }
   #home #island #logo {
     display: block;
     margin: 0 auto 20px; }
-#home #header, #home #footer {
+#home #footer {
   display: none; }
+
+#footer {
+  height: 100px; }
 
 .clearfix:after {
   content: ".";
@@ -61,66 +65,40 @@ a {
   display: inline-block; }
 
 #header {
-  margin: 0 0 40px;
-  background: #ffe75f url(/assets/header_bg.jpg) repeat-x left bottom;
-  border-bottom: 1px solid #aa8800; }
+  margin: 40px 0 40px;
+  text-align: center; }
   #header #middle_section {
     width: 700px;
     margin: 0 auto; }
     #header #middle_section #nav {
-      float: right; }
+      width: 372px;
+      margin: 20px auto 0;
+      background: #fff;
+      overflow: hidden;
+      padding: 9px 13px;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px -1px #222222; }
       #header #middle_section #nav ul li {
         float: left;
         list-style: none;
         text-align: center;
-        margin-left: 12px;
+        margin-right: 22px;
         position: relative; }
         #header #middle_section #nav ul li > a {
-          text-transform: uppercase;
-          color: #fff;
-          text-shadow: 0 1px 1px #666;
           font-weight: bold;
           font-size: 12px;
-          display: block;
-          padding: 8px 10px; }
-          #header #middle_section #nav ul li > a span {
-            margin-top: 4px;
-            display: block; }
+          display: block; }
           #header #middle_section #nav ul li > a img {
             height: 24px;
-            max-width: 24px; }
-        #header #middle_section #nav ul li .leaf_menu_wrapper {
-          display: none;
-          position: absolute;
-          width: 120px;
-          top: 52px;
-          left: -32px;
-          z-index: 300;
-          background: url(/assets/arrow_tip.png) no-repeat 49px 0;
-          padding-top: 5px; }
-          #header #middle_section #nav ul li .leaf_menu_wrapper .leaf_menu {
-            text-align: left;
-            border-radius: 5px;
-            background: #fff;
-            box-shadow: 0px 5px 5px -1px #777777;
-            z-index: 200;
-            border: 3px solid #333; }
-            #header #middle_section #nav ul li .leaf_menu_wrapper .leaf_menu a {
-              padding: 8px 12px;
-              display: block;
-              color: #777;
-              border-bottom: 1px dotted #ccc; }
-              #header #middle_section #nav ul li .leaf_menu_wrapper .leaf_menu a:hover {
-                background: #eee; }
-        #header #middle_section #nav ul li:hover .leaf_menu_wrapper {
-          display: block; }
-      #header #middle_section #nav ul li.current {
-        background: #ffe57f url(/assets/shine.png) no-repeat bottom center;
-        border-left: 1px solid #e1b507;
-        border-right: 1px solid #e1b507; }
-        #header #middle_section #nav ul li.current a {
-          border-left: 1px solid #fbffd3;
-          border-right: 1px solid #fbffd3; }
+            max-width: 24px;
+            float: left;
+            margin-right: 8px; }
+          #header #middle_section #nav ul li > a span {
+            display: block;
+            margin-top: 5px;
+            float: left; }
+      #header #middle_section #nav ul li:last-child {
+        margin-right: 0; }
       #header #middle_section #nav #nav_profile_photo {
         width: 22px;
         height: 22px;
@@ -136,11 +114,12 @@ a {
   margin-bottom: 30px; }
 
 .box {
-  width: 694px;
+  width: 600px;
   margin: 0 auto 20px;
-  background: #eee;
-  padding: 3px;
-  border-radius: 3px; }
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 17px 0px #000; }
   .box .header {
     background: -moz-linear-gradient(center top, #f5f5f5, #e1e1e1);
     background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e1e1e1));
@@ -153,10 +132,10 @@ a {
     border-top: 1px solid #bbb;
     border-right: 1px solid #bbb; }
   .box .content {
-    background: #fff;
+    background: #ebd8c0;
     padding: 25px;
-    border: 1px solid #bbb;
-    border-radius: 0 0 4px 4px; }
+    border-radius: 5px;
+    box-shadow: 0 0px 3px 0 #777 inset; }
 
 .spinner {
   display: none; }
@@ -164,19 +143,21 @@ a {
 .repos_list li {
   padding: 12px;
   border-bottom: 1px solid #e0e0e0;
-  overflow: hidden; }
+  overflow: hidden;
+  background: #fff;
+  margin: 0 0 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px -2px #555555; }
   .repos_list li a {
-    color: #EA0A89;
+    color: #b45603;
     font-weight: bold; }
-  .repos_list li:nth-child(2n+1) {
-    background: #f4f4f4; }
   .repos_list li .repo_name {
     float: left;
     display: block;
     margin-top: 2px; }
   .repos_list li .edit_repo {
     float: right;
-    background: url(/assets/pencil_16.png) no-repeat;
+    background: url(/assets/pin_16.png) no-repeat;
     width: 16px;
     height: 16px;
     display: block;

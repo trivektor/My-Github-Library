@@ -3,7 +3,6 @@
 - @body_id = "repositories"
 
 .box
-  .header Your watched repositories on Github (#{@repositories.count})
   .content
     - if @repositories.size > 0
       %ul.repos_list

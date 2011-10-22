@@ -2,6 +2,6 @@
 - @body_id = "home"
 
 #island
-  = image_tag "logo.png", :id => :logo
   
-  = link_to "Sign in with Github", user_omniauth_authorize_path(:github), :class => :action_button
+  = link_to user_omniauth_authorize_path(:github) do
+    = image_tag "github_signin.png"
