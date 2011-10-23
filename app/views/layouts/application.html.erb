@@ -15,9 +15,13 @@
 
 <%= render :partial => "shared/nav" %>  
 
-<%= yield %>
+<div id="content">
+  <%= yield %>
+</div>
 
 <div id="overlay"></div>
+
+<%= render :partial => "shared/search_dialog" %>  
 
 <%= render :partial => "shared/footer" %>  
 

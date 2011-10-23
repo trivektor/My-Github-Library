@@ -26,3 +26,23 @@ $(function() {
   })
   
 })
+
+$(function() {
+  var repositories = new Repositories
+  var repository = new Repository
+
+  var githubSyncView = new GithubSyncView({
+    el: $("#repositories"),
+    collection: repositories
+  })
+  
+  var myGithubLibraryView = new MyGithubLibraryView({
+    collection: repositories
+  })
+  
+  var searchDialog = new SearchDialog({
+    collection: repositories
+  })
+  
+  
+})

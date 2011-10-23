@@ -19,27 +19,4 @@
       
 = will_paginate(@repositories)
 
-= render 'search_dialog'
-      
-:javascript
-
-  $(function() {
-    var repositories = new Repositories
-    var repository = new Repository
-
-    var githubSyncView = new GithubSyncView({
-      el: $("#repositories"),
-      collection: repositories
-    })
-    
-    var githubRepositoriesListView = new GithubRepositoriesListView({
-      collection: repositories
-    })
-    
-    var searchDialog = new SearchDialog({
-      collection: repositories
-    })
-    
-    
-  })
       

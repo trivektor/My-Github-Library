@@ -1,7 +1,7 @@
 $(function() {
   
-  window.GithubRepositoriesListView = Backbone.View.extend({
-    el: $("#repositories"),
+  window.MyGithubLibraryView = Backbone.View.extend({
+    el: $("body"),
     initialize: function() {
       this.setupSelectors();
     },

@@ -16,6 +16,12 @@ MyGithubLibrary::Application.routes.draw do
   
   resources :tags
   
+  resources :search do
+    collection do
+      get :autocomplete
+    end
+  end
+  
   root :to => "home#index"
   
 end
