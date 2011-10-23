@@ -2,7 +2,7 @@
 - @body_class = "repositories"
 - @body_id = "edit_repository"
 
-= form_for(@repository) do |f|
+= form_for @repository, :html => {:id => :edit_repository_form} do |f|
 
   = render :partial => "shared/flash_notice"
 
