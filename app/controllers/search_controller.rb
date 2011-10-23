@@ -6,7 +6,7 @@ class SearchController < ApplicationController
   end
   
   def autocomplete
-    Search.query
+    Search.query(:term => params[:query])
     render :nothing => true
   end
   

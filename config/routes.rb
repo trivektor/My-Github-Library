@@ -11,6 +11,7 @@ MyGithubLibrary::Application.routes.draw do
   resources :repositories do
     collection do
       get :sync
+      get :autocomplete
     end
   end
   

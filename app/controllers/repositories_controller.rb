@@ -39,6 +39,11 @@ class RepositoriesController < ApplicationController
   def show
   end
   
+  def autocomplete
+    repositories = Repository.where("name LIKE ?", "%#{params[:query]}%")
+    render :json => {:query => params[:query], :suggestions => repositories.map(&:name), :data => repositories.map(&:slug)}
+  end
+  
   private
   
   def find_repo

@@ -15,11 +15,11 @@ $(function() {
     },
     setupAutocomplete: function() {
       this.search_term.autocomplete({
-        serviceUrl: "/search/autocomplete",
+        serviceUrl: "/repositories/autocomplete",
         minChars: 1,
-        width: 210,
+        width: 367,
         onSelect: function(value, data) {
-          
+          window.location.href = "/repositories/" + data
         }
       })
     }

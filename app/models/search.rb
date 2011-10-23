@@ -1,6 +1,7 @@
 class Search < ActiveRecord::Base
   
-  def self.query
+  def self.query(values = {})
+    
   end
   
 end
