@@ -3,7 +3,10 @@
 <head>
   <title><%= @title_for_layout %> - My Github Library</title>
   <%= stylesheet_link_tag    "jquery.autocomplete.css", "master.css" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag  "jquery", "jquery_ujs", "jquery.autocomplete", "_underscore", "backbone", 
+                              "collections/repositories", "models/repository",
+                              "views/githubSyncView", "views/myGithubLibraryView", 
+                              "views/searchDialog", "zstart" %>
   <%= yield :head %>
   <%= csrf_meta_tags %>
 </head>

@@ -17,8 +17,13 @@
         = f.label :personal_description
         = f.text_area :personal_description, :class => :textbox
         
+      .tags_list{:style => "margin:8px; display:none"}
+        
       .form_row
         %label Tags
-        %input{:type => :text, :class => :textbox}
+        %input{:type => :text, :class => :textbox, :id => :tags_box}
         
       = f.submit :value => "Update repo information", :class => :action_button
+      
+= content_for :head do
+  = javascript_include_tag "models/tag", "collections/tags", "views/tagsBoxView", "views/tagsListView", "edit_repo.js"

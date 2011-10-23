@@ -15,7 +15,11 @@ MyGithubLibrary::Application.routes.draw do
     end
   end
   
-  resources :tags
+  resources :tags do
+    collection do
+      get :autocomplete
+    end
+  end
   
   resources :search do
     collection do

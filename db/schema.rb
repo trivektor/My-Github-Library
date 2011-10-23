@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111023053222) do
+ActiveRecord::Schema.define(:version => 20111016221447) do
 
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"
@@ -65,10 +65,11 @@ ActiveRecord::Schema.define(:version => 20111023053222) do
   add_index "repositories_tags", ["tag_id"], :name => "index_repositories_tags_on_tag_id"
 
   create_table "tags", :force => true do |t|
+    t.integer  "user_id"
     t.string   "name"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "repository_id"
   end
 
   create_table "users", :force => true do |t|

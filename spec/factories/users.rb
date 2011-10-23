@@ -2,5 +2,6 @@
 
 FactoryGirl.define do
   factory :user do
+    password "abcd1234"
   end
 end
