@@ -11,9 +11,13 @@
 
 <%= render :partial => "shared/header" %>  
 
+<%= render :partial => "shared/username_pane" %>
+
 <%= render :partial => "shared/nav" %>  
 
 <%= yield %>
+
+<div id="overlay"></div>
 
 <%= render :partial => "shared/footer" %>  
 

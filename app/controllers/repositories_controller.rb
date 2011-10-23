@@ -29,7 +29,7 @@ class RepositoriesController < ApplicationController
   
   def update
     if @repository.update_attributes(params[:repository])
-      flash[:notice] = "Cool! Repo information has been updated"
+      flash[:notice] = "Cool! Repo details have been updated"
       redirect_to :action => :edit
     else
       render :action => :edit

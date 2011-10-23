@@ -1,0 +1,7 @@
+- if user_signed_in?
+  %ul#username_pane
+    %li= image_tag current_user.gravatar_url, :class => :user_photo
+    %li 
+      %a= current_user.email
+    %li
+      = link_to "Logout", destroy_user_session_path, :method => :delete

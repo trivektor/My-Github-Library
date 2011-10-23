@@ -6,7 +6,8 @@ body {
   font-family: arial;
   font-size: 13px;
   color: #444;
-  background: url(/assets/wood.jpg) center top; }
+  background: url(/assets/wood.jpg) center top;
+  padding-bottom: 40px; }
 
 ul {
   list-style: none; }
@@ -15,34 +16,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
 textarea {
-  height: 90px !important;
+  height: 100px !important;
   font-family: arial; }
 
 a {
   text-decoration: none;
   outline-style: none;
   color: #B45603; }
-
-#home #island {
-  width: 400px;
-  margin: 147px auto 0;
-  text-align: center; }
-  #home #island #logo {
-    display: block;
-    margin: 0 auto 20px; }
-#home #footer {
-  display: none; }
-
-#footer {
-  height: 100px; }
-
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0; }
 
 .action_button {
   background: #5d3408;
@@ -72,7 +52,7 @@ a {
     margin-top: 9px; }
 
 #nav {
-  width: 390px;
+  width: 464px;
   margin: 20px auto 40px;
   background: #fff;
   padding: 5px;
@@ -105,16 +85,28 @@ a {
           float: left; }
     #nav ul li:last-child {
       margin-right: 0; }
-  #nav #nav_profile_photo {
-    width: 22px;
-    height: 22px;
-    background: #fff;
-    padding: 1px;
-    box-shadow: 0 1px 3px 0 #666; }
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1000;
+  display: none; }
 
 #footer {
   text-align: center;
   margin-bottom: 30px; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
 
 .box {
   width: 568px;
@@ -189,7 +181,7 @@ a {
   padding: 12px 10px;
   border-radius: 4px;
   box-shadow: 0 3px 3px #706751 inset;
-  width: 528px;
+  width: 498px;
   font-size: 17px;
   color: #614a31;
   line-height: 17px;
@@ -199,18 +191,15 @@ a {
   border-width: medium medium 2px; }
 
 .flash_notice {
-  background: url(/assets/check_16.gif) no-repeat 15px 15px;
+  background: url(/assets/check_16.gif) no-repeat 15px 15px white;
   padding: 15px 15px 15px;
   font-size: 19px;
-  width: 966px;
-  margin: 10px auto 20px;
+  width: 560px;
+  margin: 10px auto 40px;
   color: #7ba81b;
   text-indent: 32px;
-  box-shadow: 0 1px 8px 0 #ccc;
+  box-shadow: 0 3px 9px -1px #111111;
   border-radius: 4px; }
-
-#dashboard #footer {
-  display: none; }
 
 .repo_info_list {
   margin-bottom: 20px; }
@@ -245,3 +234,41 @@ a {
     border-radius: 3px;
     border: 1px solid #55320d;
     box-shadow: 0 1px 0 0 #A47440 inset; }
+
+#username_pane {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 7px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3); }
+  #username_pane li {
+    float: left;
+    margin-right: 12px; }
+    #username_pane li a {
+      margin-top: 4px;
+      display: block;
+      text-shadow: 0 2px 1px #000;
+      color: #fff;
+      font-family: lucida sans;
+      font-size: 11px;
+      text-transform: uppercase; }
+  #username_pane li:last-child {
+    margin: 0; }
+  #username_pane .user_photo {
+    border: 1px solid #fff;
+    width: 20px;
+    box-shadow: 0 1px 1px #222; }
+
+#dashboard #footer {
+  display: none; }
+
+#home #island {
+  width: 400px;
+  margin: 147px auto 0;
+  text-align: center; }
+  #home #island #logo {
+    display: block;
+    margin: 0 auto 20px; }
+#home #footer {
+  display: none; }
