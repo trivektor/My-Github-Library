@@ -1,33 +1,3 @@
-- if user_signed_in?
-  %header#header
-    #middle_section.clearfix
-      = image_tag "header_logo.png"
-    
-      %nav#nav
-        %ul
-          %li
-            %a{:title => current_user.username}
-              = image_tag current_user.gravatar_url, :id => :nav_profile_photo
-              %span= current_user.username.truncate(8)
-            
-          %li{:class => @body_id == "dashboard" ? "current" : "", :style => "display:none"}
-            = link_to dashboard_path do
-              = image_tag "dash_24.png"
-              %span Dashboard
-              
-          %li{:class => @body_class == "repositories" ? "current" : ""}
-            = link_to repositories_path do
-              = image_tag "git_24.png"
-              %span Repositories
-              
-          %li{:class => @body_class == "tags" ? "current" : ""}
-            = link_to tags_path do
-              = image_tag "tag_24.png"
-              %span Tags
-              
-          %li
-            = link_to destroy_user_session_path do
-              = image_tag "signout_24.png"
-              %span Logout
-    
-  
+%header#header
+  #middle_section.clearfix
+    = image_tag "header_logo.png"

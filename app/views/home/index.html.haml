@@ -3,5 +3,6 @@
 
 #island
   
-  = link_to user_omniauth_authorize_path(:github) do
-    = image_tag "github_signin.png"
+  - unless user_signed_in?
+    = link_to user_omniauth_authorize_path(:github) do
+      = image_tag "github_signin.png"

@@ -11,7 +11,7 @@ class RepositoriesController < ApplicationController
   def index
     respond_to do |format|
       format.html do
-        @repositories = current_user.repositories
+        @repositories = current_user.repositories.paginate(:per_page => 120, :page => @page)
       end
       
       format.json do

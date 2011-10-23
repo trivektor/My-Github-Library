@@ -6,7 +6,7 @@ body {
   font-family: arial;
   font-size: 13px;
   color: #444;
-  background: url(/assets/wood.jpg) left center fixed; }
+  background: url(/assets/wood.jpg) center top; }
 
 ul {
   list-style: none; }
@@ -21,7 +21,7 @@ textarea {
 a {
   text-decoration: none;
   outline-style: none;
-  color: #EA0A89; }
+  color: #B45603; }
 
 #home #island {
   width: 400px;
@@ -45,14 +45,11 @@ a {
   height: 0; }
 
 .action_button {
-  background: #0C8DFF;
-  padding: 8px 15px;
-  border: 1px solid #f67b0e;
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: #5d3408;
+  padding: 10px 18px;
+  border: 1px solid #4e360d;
   color: #fff;
   cursor: pointer;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: bold;
   -webkit-border-radius: 5px;
@@ -61,7 +58,7 @@ a {
   background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2)));
   background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-  box-shadow: 0 1px 0 0 #9BD3FF inset;
+  box-shadow: 0 1px 0 0 #c08a2c inset;
   display: inline-block; }
 
 #header {
@@ -70,51 +67,57 @@ a {
   #header #middle_section {
     width: 700px;
     margin: 0 auto; }
-    #header #middle_section #nav {
-      width: 372px;
-      margin: 20px auto 0;
-      background: #fff;
-      overflow: hidden;
-      padding: 9px 13px;
-      border-radius: 5px;
-      box-shadow: 0 2px 8px -1px #222222; }
-      #header #middle_section #nav ul li {
-        float: left;
-        list-style: none;
-        text-align: center;
-        margin-right: 22px;
-        position: relative; }
-        #header #middle_section #nav ul li > a {
-          font-weight: bold;
-          font-size: 12px;
-          display: block; }
-          #header #middle_section #nav ul li > a img {
-            height: 24px;
-            max-width: 24px;
-            float: left;
-            margin-right: 8px; }
-          #header #middle_section #nav ul li > a span {
-            display: block;
-            margin-top: 5px;
-            float: left; }
-      #header #middle_section #nav ul li:last-child {
-        margin-right: 0; }
-      #header #middle_section #nav #nav_profile_photo {
-        width: 22px;
-        height: 22px;
-        background: #fff;
-        padding: 1px;
-        box-shadow: 0 1px 3px 0 #666; }
   #header #logo {
     float: left;
     margin-top: 9px; }
+
+#nav {
+  width: 390px;
+  margin: 20px auto 40px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px -1px #222222; }
+  #nav ul {
+    overflow: hidden;
+    background: #E8DED3;
+    padding: 7px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 #81664A inset; }
+    #nav ul li {
+      float: left;
+      list-style: none;
+      text-align: center;
+      margin-right: 22px;
+      position: relative; }
+      #nav ul li > a {
+        font-weight: bold;
+        font-size: 12px;
+        display: block; }
+        #nav ul li > a img {
+          height: 24px;
+          max-width: 24px;
+          float: left;
+          margin-right: 8px; }
+        #nav ul li > a span {
+          display: block;
+          margin-top: 5px;
+          float: left; }
+    #nav ul li:last-child {
+      margin-right: 0; }
+  #nav #nav_profile_photo {
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    padding: 1px;
+    box-shadow: 0 1px 3px 0 #666; }
 
 #footer {
   text-align: center;
   margin-bottom: 30px; }
 
 .box {
-  width: 600px;
+  width: 568px;
   margin: 0 auto 20px;
   background: #fff;
   padding: 10px;
@@ -135,22 +138,24 @@ a {
     background: #ebd8c0;
     padding: 25px;
     border-radius: 5px;
-    box-shadow: 0 0px 3px 0 #777 inset; }
+    box-shadow: 0 0px 3px 0 #81664a inset;
+    background: #e8ded3; }
 
 .spinner {
   display: none; }
 
 .repos_list li {
-  padding: 12px;
-  border-bottom: 1px solid #e0e0e0;
+  background: -moz-linear-gradient(center top, white, #eeeeee);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
+  padding: 14px 16px;
   overflow: hidden;
-  background: #fff;
-  margin: 0 0 15px;
+  margin: 0 0 14px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px -2px #555555; }
+  box-shadow: 0 2px 6px -2px #888888; }
   .repos_list li a {
     color: #b45603;
-    font-weight: bold; }
+    font-weight: bold;
+    font-family: arial rounded mt bold; }
   .repos_list li .repo_name {
     float: left;
     display: block;
@@ -164,7 +169,7 @@ a {
     text-indent: -9999px; }
   .repos_list li .repo_github_url {
     float: right;
-    background: url(/assets/link_16.gif) no-repeat;
+    background: url(/assets/details_16.png) no-repeat;
     width: 16px;
     height: 16px;
     display: block;
@@ -178,17 +183,20 @@ a {
     margin-bottom: 9px;
     font-size: 17px;
     font-family: georgia;
-    color: #777; }
+    color: #333; }
 
 .textbox {
   padding: 12px 10px;
   border-radius: 4px;
-  border: 1px solid #bbb;
-  box-shadow: 0 2px 3px 1px #ddd inset;
-  width: 621px;
-  font-size: 19px;
-  color: #555;
-  line-height: 19px; }
+  box-shadow: 0 3px 3px #706751 inset;
+  width: 528px;
+  font-size: 17px;
+  color: #614a31;
+  line-height: 17px;
+  background: #d0bfaa;
+  border-color: #FFF8E8;
+  border-style: none none solid;
+  border-width: medium medium 2px; }
 
 .flash_notice {
   background: url(/assets/check_16.gif) no-repeat 15px 15px;
@@ -207,9 +215,33 @@ a {
 .repo_info_list {
   margin-bottom: 20px; }
   .repo_info_list li {
+    border-radius: 5px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 6px -2px #888888;
     background: -moz-linear-gradient(center top, white, #eeeeee);
     background: -webkit-gradient(linear, left top, left bottom, from(white), to(#eeeeee));
     padding: 15px;
     border-top: 1px solid #ddd; }
     .repo_info_list li b {
       color: #EA0A89; }
+
+.pagination {
+  width: 620px;
+  margin: 40px auto;
+  text-align: center;
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 14px;
+  text-shadow: 0 1px 1px #000; }
+  .pagination * {
+    margin: 0 4px; }
+  .pagination a {
+    color: #fff; }
+  .pagination .current {
+    background: #614b33;
+    font-style: normal !important;
+    text-shadow: 0 0 0;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid #55320d;
+    box-shadow: 0 1px 0 0 #A47440 inset; }

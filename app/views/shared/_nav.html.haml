@@ -1,0 +1,17 @@
+- if user_signed_in?
+  %nav#nav
+    %ul
+      %li
+        %a
+          = image_tag "sync_24.png"
+          %span Sync Github repos
+        
+      %li
+        = link_to repositories_path do
+          = image_tag "git_24.png"
+          %span Repositories
+        
+      %li
+        = link_to tags_path do
+          = image_tag "tag_24.png"
+          %span Tags
