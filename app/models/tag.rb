@@ -8,6 +8,8 @@ class Tag < ActiveRecord::Base
   validates_presence_of :user_id, :name, :message => "is required"
   validates_uniqueness_of :name, :scope => :user_id
   
+  scope :alphabetically_ordered, order("name ASC")
+  
   def self.create(values, user)
     
   end

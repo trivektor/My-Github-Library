@@ -22,6 +22,7 @@ $(function() {
         if (event.which == 13) {
           event.preventDefault();
           _this.model.set({name: _this.el.val(), repository_id: window.repository_id}).trigger("addNewTagEvent");
+          _this.el.val("")
         }
       })
     }

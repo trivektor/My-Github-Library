@@ -25,7 +25,7 @@ class RepositoriesController < ApplicationController
   end
   
   def edit
-    @tags = @repository.tags
+    @tags = @repository.tags.alphabetically_ordered
   end
   
   def update

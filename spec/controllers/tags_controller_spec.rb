@@ -80,6 +80,20 @@ describe TagsController do
       r.should have(5).items
     end
     
+    it "should return a collection of tags that belong to the current user and repo only" do
+      haml_repo = Factory(:repository, :name => "haml", :user_id => @user.id)
+      smarty_repo = Factory(:repository, :name => "smarty", :user_id => @user.id)
+      
+      xhr :post, :create, {:tag => {:name => "php"}, :repository_id => smarty_repo.id}
+
+      xhr :post, :create, {:tag => {:name => "templating language"}, :repository_id => haml_repo.id}
+      xhr :post, :create, {:tag => {:name => "ruby"}, :repository_id => haml_repo.id}
+      
+      r = JSON.parse(response.body)
+      print r.inspect
+      r.should_not include smarty_repo
+    end
+    
   end
 
 end
