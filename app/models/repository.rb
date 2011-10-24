@@ -16,7 +16,7 @@ class Repository < ActiveRecord::Base
       
       break if repos['repositories'].count == 0
 
-      
+      repos['repositories'].each do |repo|
         r = Repository.new(
           :user_id => user.id,
           :name => repo['name'],
@@ -35,7 +35,7 @@ class Repository < ActiveRecord::Base
         r.save if r.valid?
         #ret << r if r.valid?
         #ret
-
+      end
 
       #Repository.import repositories
       
