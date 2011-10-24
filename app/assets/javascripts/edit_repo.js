@@ -1,10 +1,14 @@
 $(function() {
   
-  var tag = new Tag
   var tags = new Tags
+  var tag = new Tag({collection: tags})
   
   tag.bind("addNewTagEvent", function() {
     tag.save()
+  })
+  
+  tag.bind("afterSaveEvent", function(response) {
+    this.get("collection").reset().add($.parseJSON(response))
   })
   
   var tagsBoxView = new TagsBoxView({model: tag, collection: tags})

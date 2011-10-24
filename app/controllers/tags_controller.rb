@@ -13,10 +13,12 @@ class TagsController < ApplicationController
           tag.user_id = current_user.id
           if tag.valid?
             tag.save
+            tag.repositories << Repository.find(params[:repository_id])
+            tag.save
           end
         rescue
         end
-        render :json => {:tags => current_user.tags}
+        render :json => current_user.tags
       end
       
       format.html do

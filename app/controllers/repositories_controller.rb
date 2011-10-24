@@ -25,6 +25,7 @@ class RepositoriesController < ApplicationController
   end
   
   def edit
+    @tags = @repository.tags
   end
   
   def update

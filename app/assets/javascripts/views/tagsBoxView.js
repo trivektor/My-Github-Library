@@ -3,7 +3,7 @@ $(function() {
   window.TagsBoxView = Backbone.View.extend({
     el: $("#tags_box"),
     initialize: function() {
-      this.setupAutocomplete();
+      //this.setupAutocomplete();
       this.setupKeypress();
     },
     setupAutocomplete: function() {
@@ -21,7 +21,7 @@ $(function() {
       this.el.keypress(function(event) {
         if (event.which == 13) {
           event.preventDefault();
-          _this.model.set({name: _this.el.val()}).trigger("addNewTagEvent");
+          _this.model.set({name: _this.el.val(), repository_id: window.repository_id}).trigger("addNewTagEvent");
         }
       })
     }
