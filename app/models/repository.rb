@@ -16,7 +16,7 @@ class Repository < ActiveRecord::Base
       
       break if repos['repositories'].count == 0
 
-      repositories = repos['repositories'].inject([]) do |ret, repo|
+      
         r = Repository.new(
           :user_id => user.id,
           :name => repo['name'],
@@ -32,11 +32,12 @@ class Repository < ActiveRecord::Base
           :has_wiki => repo['has_wiki'],
           :forks => repo['forks']
         )
-        ret << r if r.valid?
-        ret
-      end
+        r.save if r.valid?
+        #ret << r if r.valid?
+        #ret
 
-      Repository.import repositories
+
+      #Repository.import repositories
       
     end
   end
