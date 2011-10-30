@@ -1,3 +1,9 @@
 - @title_for_layout = "Tags"
 - @body_class = "tags"
 - @body_id = "tags"
+
+.box
+  .content
+    #tags_list.clearfix
+      - @tags.each do |tag|
+        = link_to tag.name, tag_path(tag), :class => :tag_label

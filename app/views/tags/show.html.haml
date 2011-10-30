@@ -1,0 +1,13 @@
+- @title_for_layout = "Tags"
+- @body_class = "tags"
+- @body_id = "tags"
+
+.box
+  .content
+    %h2 Repositories (#{@repositories.length})
+    
+    %br
+    
+    - if @repositories.length > 0
+      = render :partial => "shared/repositories_list", :locals => {:repositories => @repositories}
+    

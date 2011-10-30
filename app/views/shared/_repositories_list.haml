@@ -1,0 +1,6 @@
+%ul.repos_list
+  - repositories.each do |r|
+    %li
+      = link_to r.name, edit_repository_path(r), :class => :repo_name
+      = link_to "Edit", edit_repository_path(r), :class => :edit_repo, :title => "Add a personal description for this repo"
+      = link_to "View", repository_path(r), :class => :repo_github_url, :title => "View details of this repo"
