@@ -9,29 +9,8 @@ class TagsController < ApplicationController
     respond_to do |format|
       format.js do
         repository = Repository.find(params[:repository_id])
-        
-        begin
-          
-          tag = Tag.new(params[:tag])
-          tag.user_id = current_user.id
-          
-          if !Tag.exists?(:user_id => current_user.id, :name => params[:tag][:name])
-            if tag.valid?
-              tag.save
-              tag.repositories << repository
-              tag.save
-            end
-          else
-            existing_tag = Tag.where(:user_id => current_user.id, :name => params[:tag][:name]).first
-            existing_tag.repositories << repository
-            existing_tag.save
-          end
-          
-          render :json => repository.tags
-        rescue
-          render :json => repository.tags
-        end
-        
+        Tag.create(:tag => params[:tag], :repository => repository, :user => current_user)          
+        render :json => repository.tags
       end
       
       format.html do

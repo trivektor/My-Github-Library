@@ -21,7 +21,9 @@
         %label Tags
         #tags_list.clearfix
           - @tags.each do |tag|
-            .tag_label= tag.name
+            .tag_label
+              = tag.name
+              %b.remove_tag x
         
         %input{:type => :text, :class => :textbox, :id => :tags_box}
         
