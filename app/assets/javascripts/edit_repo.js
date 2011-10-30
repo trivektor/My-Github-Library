@@ -8,7 +8,15 @@ $(function() {
   })
   
   tag.bind("afterSaveEvent", function(response) {
-    this.get("collection").reset().add($.parseJSON(response))
+    var collection = this.get("collection");
+    collection.reset().add(response.repository);
+    collection.trigger("fetched");
+  })
+  
+  tag.bind("afterRemoveEvent", function(response) {
+    var collection = this.get("collection");
+    collection.reset().add(response.repository);
+    collection.trigger("fetched");
   })
   
   var tagsBoxView = new TagsBoxView({model: tag, collection: tags})

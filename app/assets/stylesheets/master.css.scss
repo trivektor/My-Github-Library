@@ -174,7 +174,7 @@ line-height:17px; background:#d0bfaa; border-color:#FFF8E8; border-style:none no
 #tags_list {
   margin:8px 0;
   .tag_label {
-    float:left; margin-right:6px; background: #fec500; padding: 3px 5px 6px; border: 1px solid #957400; color: #fff; line-height:12px;
+    float:left; margin:0 6px 6px 0; background: #fec500; padding: 3px 5px 6px; border: 1px solid #957400; color: #fff; line-height:12px;
     -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; 
     background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2)));

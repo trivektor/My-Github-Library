@@ -10,6 +10,8 @@ class Tag < ActiveRecord::Base
   
   scope :alphabetically_ordered, order("name ASC")
   
+  attr_accessor :repository_id
+  
   def self.create(values)
     user = values[:user]
     tag = Tag.new(values[:tag])
@@ -29,7 +31,18 @@ class Tag < ActiveRecord::Base
         existing_tag.save
       end
     end
-    
+  end
+  
+  def as_json(options = {})
+    {
+      :id => self.id,
+      :name => self.name,
+      :slug => self.slug,
+      :user_id => self.user_id,
+      :repository_id => self.repository_id,
+      :created_at => self.created_at,
+      :updated_at => self.updated_at
+    }
   end
   
 end

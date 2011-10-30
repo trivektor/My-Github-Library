@@ -17,6 +17,20 @@ $(function() {
           console.log(errorThrown)
         }
       })
+    },
+    remove: function() {
+      var _this = this;
+      
+      $.ajax({
+        url: "/tags/" + this.get("tag_id"),
+        type: "DELETE",
+        data: {repository_id: this.get("repository_id")},
+        success: function(response) {
+          if (response.success == 1) {
+            _this.trigger("afterRemoveEvent", response);
+          }
+        }
+      })
     }
   })
   

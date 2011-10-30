@@ -23,7 +23,7 @@
           - @tags.each do |tag|
             .tag_label
               = tag.name
-              %b.remove_tag x
+              %b.remove_tag{:tag_id => tag.id, :repository_id => @repository.id} x
         
         %input{:type => :text, :class => :textbox, :id => :tags_box}
         

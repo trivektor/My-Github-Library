@@ -7,10 +7,10 @@ class TagsController < ApplicationController
   
   def create
     respond_to do |format|
-      format.js do
+      format.json do
         repository = Repository.find(params[:repository_id])
         Tag.create(:tag => params[:tag], :repository => repository, :user => current_user)          
-        render :json => repository.tags
+        render :json => {:success => 1, :repository => repository.tags.alphabetically_ordered.each { |t| t.repository_id = repository.id } }
       end
       
       format.html do
@@ -19,9 +19,16 @@ class TagsController < ApplicationController
     end
   end
   
+  def destroy
+    repository = Repository.find(params[:repository_id])
+    tag = Tag.find(params[:id])
+    repository.tags.delete(tag)
+    render :json => {:success => 1, :repository => repository.tags.alphabetically_ordered.each { |t| t.repository_id = repository.id } }
+  end
+  
   def autocomplete
     respond_to do |format|
-      format.js do
+      format.json do
         render :nothing => true
       end
       
