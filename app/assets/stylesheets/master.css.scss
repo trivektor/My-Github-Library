@@ -10,6 +10,24 @@ textarea {height:100px !important; font-family:arial}
 
 a { text-decoration:none; outline-style:none; color:#B45603; cursor:pointer }
 
+.autocomplete-w1 {
+  background: url(/assets/shadow.png) no-repeat bottom right; position: absolute; top: 0px; left: 0px; margin: 8px 0 0 6px;
+  /* IE6 fix: */
+  _background: none; _margin: 0; }
+
+.autocomplete {
+  border: 1px solid #999; background: #FFF; cursor: default; text-align: left; max-height: 350px; overflow: auto; margin: -6px 6px 6px -6px;
+  /* IE6 specific: */
+  _height: 350px;
+  _margin: 0;
+  _overflow-x: hidden; }
+
+.autocomplete .selected { background: #eee1d4; }
+
+.autocomplete div { padding: 4px 6px; white-space: nowrap; }
+
+.autocomplete strong { font-weight: normal; color: #b15600; }
+
 .action_button {
   background: #5d3408; padding: 10px 18px; border: 1px solid #4e360d; color: #fff; cursor: pointer; font-size:13px; font-weight: bold;
   -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
