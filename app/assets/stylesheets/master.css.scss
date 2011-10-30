@@ -165,3 +165,7 @@ line-height:17px; background:#d0bfaa; border-color:#FFF8E8; border-style:none no
     display:inline-block;
   }
 }
+
+#github_sync_status {
+  position:absolute; top:0; left:0; background:rgba(0, 0, 0, 0.3); color:#fff; padding:5px 6px; display:none;
+}

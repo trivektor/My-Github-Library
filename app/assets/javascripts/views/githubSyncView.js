@@ -6,25 +6,20 @@ $(function() {
       this.collection.bind("add", this.updateSyncStatus, this);
     },
     setupSelectors: function() {
-      this.spinner = $("#spinner");
+      this.sync_status = $("#github_sync_status");
     },
     events: {
-      'click #sync_github': 'syncGithub'
+      'click #sync_github': 'syncGithub',
+      'click #sync': 'syncGithub'
     },
     syncGithub: function() {
-      this.showSpinner();
       this.collection.sync();
+      this.sync_status.html("Synching...").show();
     },
     updateSyncStatus: function() {
-      this.hideSpinner();
+      this.sync_status.hide();
       alert("Your repositories have been synched");
       window.location.href = window.location.href
-    },
-    hideSpinner: function() {
-      this.spinner.hide();
-    },
-    showSpinner: function() {
-      this.spinner.show();
     }
   })
   
