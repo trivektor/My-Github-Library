@@ -2,10 +2,16 @@
 - @body_id = "home"
 
 #intro
-  %h1 What is it?
   
-  %p My Github Library (MGL) helps you manage your watched repositories on Github by tagging and adding a personal description/note for each of them.
+  %h2 What is My Github Library and what problem does it try to solve?
   
-  %p{:style => "text-align:center"}
-    = link_to user_omniauth_authorize_path(:github) do
-      = image_tag "github_signin.png"
+  %p 
+    Github is an awesome place for code sharing and collaboration. Yet when it comes to managing your watched repos all Github does is giving you a massive, long list and let you wade through yourself. Have you ever wondered 
+    "What is that great gem for sending SMS that I watched 2 months ago?" For people who watch a lot of repos, this can be a challenge. My Github Library (MGL) lets you tag and add personal description/note for each watched 
+    repositories on Github making referencing quick and easy.
+  
+  = link_to user_omniauth_authorize_path(:github) do
+    = image_tag "github_signin.png"
+    
+%a{:href => "https://github.com/trivektor/My-Github-Library", :style => "position:absolute; top:0; right:0"}
+  = image_tag "https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67"

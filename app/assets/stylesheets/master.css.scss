@@ -191,11 +191,10 @@ line-height:17px; background:#d0bfaa; border-color:#FFF8E8; border-style:none no
 
 #home {
   #intro {
-    font-family: 'Reenie Beanie', cursive;
-    padding:30px; background:#fff; border-radius:5px; width:600px; margin:100px auto; box-shadow:0 2px 11px 0px #333;
-    h1 {
-      font-size:40px; margin-bottom:30px;
+    padding:30px; background:#fff; border-radius:5px; width:600px; margin:70px auto; box-shadow:0 2px 11px 0px #222;
+    h2 {
+      margin-bottom:20px; font-family:'Reenie Beanie'; font-size:30px;
     }
-    p { font-size:30px; line-height:50px; margin:30px 0 }
+    p { line-height:25px; margin:20px 0 }
   }
 }
