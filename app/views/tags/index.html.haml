@@ -4,6 +4,9 @@
 
 .box
   .content
-    #tags_list.clearfix
-      - @tags.each do |tag|
-        = link_to tag.name, tag_path(tag), :class => :tag_label
+    - if @tags.length > 0
+      #tags_list.clearfix
+        - @tags.each do |tag|
+          = link_to tag.name, tag_path(tag), :class => :tag_label
+    - else
+      %p You haven't created any tags yet
