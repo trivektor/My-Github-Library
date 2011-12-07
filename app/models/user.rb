@@ -23,10 +23,12 @@ class User < ActiveRecord::Base
       user
     else 
       # Create a user with a stub password. 
+      pwd = Devise.friendly_token[0,20]
       user = User.create(
         :username     => data['login'],
         :email        => data['email'], 
-        :password     => Devise.friendly_token[0,20]
+        :password     => pwd,
+        :password_confirmation     => pwd
       )
       
       user.create_profile({
