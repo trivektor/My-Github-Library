@@ -9,7 +9,7 @@
     - else
       .form_row You don't have any repositories here.
       
-      %a.action_button#sync_github Sync my Github
+      %a.action_button#sync_github Sync my Github repos
       = image_tag "ajax-loader.gif", :id => :spinner, :class => :spinner 
       
 = will_paginate(@repositories)
