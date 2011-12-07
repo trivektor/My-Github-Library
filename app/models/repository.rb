@@ -10,14 +10,12 @@ class Repository < ActiveRecord::Base
   validates_uniqueness_of :name, :scope => :user_id
   
   def self.sync(user)
-    rep = []
-    
     (1..100).each do |i|
       request = Net::HTTP.get(URI.parse("http://github.com/api/v2/json/repos/watched/#{user.username}?page=#{i}"))
       repos = JSON::parse(request)
       
       break if repos['repositories'].count == 0
-    
+
       repos['repositories'].each do |repo|
         r = Repository.new(
           :user_id => user.id,
@@ -34,12 +32,14 @@ class Repository < ActiveRecord::Base
           :has_wiki => repo['has_wiki'],
           :forks => repo['forks']
         )
-
-        rep << r if r.valid?
+        r.save if r.valid?
+        #ret << r if r.valid?
+        #ret
       end
+
+      #Repository.import repositories
+      
     end
-    
-    Repository.import(rep) unless rep.length == 0
   end
   
 end
