@@ -1,8 +1,11 @@
 - @title_for_layout = "Home"
 - @body_id = "home"
 
-#island
+#intro
+  %h1 What is it?
   
-  - unless user_signed_in?
+  %p My Github Library (MGL) helps you manage your watched repositories on Github by tagging and adding a personal description/note for each of them.
+  
+  %p{:style => "text-align:center"}
     = link_to user_omniauth_authorize_path(:github) do
       = image_tag "github_signin.png"

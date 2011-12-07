@@ -1,12 +1,12 @@
 * { padding:0; margin:0 }
 
-body { font-family:arial; font-size:13px; color:#444; background:url(/assets/wood.jpg) center top; padding-bottom:40px }
+body { font-family: 'Varela Round', sans-serif; font-size:13px; color:#444; background:url(/assets/wood.jpg) center top; padding-bottom:40px }
 
 ul {list-style:none}
 
 h1, h2, h3, h4, h5, h6 { font-weight:normal }
 
-textarea {height:100px !important; font-family:arial}
+textarea {height:100px !important; font-family:inherit}
 
 a { text-decoration:none; outline-style:none; color:#B45603; cursor:pointer }
 
@@ -76,7 +76,7 @@ a { text-decoration:none; outline-style:none; color:#B45603; cursor:pointer }
   width:568px; margin:0 auto 20px; background:#fff; padding:10px; border-radius:5px; box-shadow:0px 5px 17px 0px #000;
   .header {
     background: -moz-linear-gradient(center top, #f5f5f5, #e1e1e1); background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e1e1e1));
-    font-family: georgia; font-size: 17px; color: #555; padding: 14px 25px; border-radius: 4px 4px 0 0; border-left: 1px solid #bbb; border-top: 1px solid #bbb;
+    font-size: 17px; color: #555; padding: 14px 25px; border-radius: 4px 4px 0 0; border-left: 1px solid #bbb; border-top: 1px solid #bbb;
     border-right: 1px solid #bbb;
   }
   .content {
@@ -89,7 +89,7 @@ a { text-decoration:none; outline-style:none; color:#B45603; cursor:pointer }
 .repos_list {
   li { 
     background: -moz-linear-gradient(center top, #fff, #eee); background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
-    padding:14px 16px; overflow:hidden; margin:0 0 14px; border-radius:5px; box-shadow:0 2px 6px -2px #888;
+    padding:14px 16px; overflow:hidden; margin:0 0 14px; border-radius:5px; box-shadow:0 2px 6px -4px #000;
     a {color:#b45603; font-weight:bold; font-family:arial rounded mt bold }
     .repo_name { float:left; display:block; margin-top:2px }
     .edit_repo { float:right; background:url(/assets/pin_16.png) no-repeat; width:16px; height:16px; display:block; text-indent:-9999px }
@@ -187,4 +187,15 @@ line-height:17px; background:#d0bfaa; border-color:#FFF8E8; border-style:none no
 
 #github_sync_status {
   position:absolute; top:0; left:0; background:rgba(0, 0, 0, 0.3); color:#fff; padding:5px 6px; display:none;
+}
+
+#home {
+  #intro {
+    font-family: 'Reenie Beanie', cursive;
+    padding:30px; background:#fff; border-radius:5px; width:600px; margin:100px auto; box-shadow:0 2px 11px 0px #333;
+    h1 {
+      font-size:40px; margin-bottom:30px;
+    }
+    p { font-size:30px; line-height:50px; margin:30px 0 }
+  }
 }

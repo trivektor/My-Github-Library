@@ -37,6 +37,7 @@ group :test, :development do
   gem 'spork'
   gem 'rspec-rails', :git => 'git://github.com/rspec/rspec-rails.git'
   gem 'factory_girl_rails', :git => 'git://github.com/thoughtbot/factory_girl_rails.git'
+  gem 'autotest-rails'
 end
 
 group :production do
