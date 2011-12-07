@@ -7,7 +7,7 @@ class Repository < ActiveRecord::Base
   
   has_and_belongs_to_many :tags
   
-  validates_uniqueness_of :name
+  validates_uniqueness_of :name, :scope => :user_id
   
   def self.sync(user)
     (1..100).each do |i|
@@ -15,6 +15,8 @@ class Repository < ActiveRecord::Base
       repos = JSON::parse(request)
       
       break if repos['repositories'].count == 0
+      
+      rep = []
 
       repos['repositories'].each do |repo|
         r = Repository.new(
@@ -32,12 +34,11 @@ class Repository < ActiveRecord::Base
           :has_wiki => repo['has_wiki'],
           :forks => repo['forks']
         )
-        r.save if r.valid?
-        #ret << r if r.valid?
-        #ret
+
+        rep << r if r.valid?
       end
 
-      #Repository.import repositories
+      Repository.import rep
       
     end
   end
