@@ -32,7 +32,7 @@ $(function() {
   var repository = new Repository
 
   var githubSyncView = new GithubSyncView({
-    el: $("#repositories"),
+    el: $("body"),
     collection: repositories
   })
   

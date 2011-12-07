@@ -29,7 +29,7 @@ a { text-decoration:none; outline-style:none; color:#B45603; cursor:pointer }
 .autocomplete strong { font-weight: normal; color: #b15600; }
 
 .action_button {
-  background: #5d3408; padding: 10px 18px; border: 1px solid #4e360d; color: #fff; cursor: pointer; font-size:13px; font-weight: bold;
+  background: #5d3408; padding: 10px 18px; border: 1px solid #4e360d; color: #fff; cursor: pointer;
   -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
   background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2)));
@@ -41,7 +41,7 @@ a { text-decoration:none; outline-style:none; color:#B45603; cursor:pointer }
 #header {
   margin:40px 0 40px; text-align:center;
   #middle_section {
-    width:700px; margin:0 auto;
+    width:700px; margin:0 auto; font-size:40px; color:#fff; text-shadow:0 1px 3px #111;
   }
 
   #logo {
@@ -57,7 +57,7 @@ a { text-decoration:none; outline-style:none; color:#B45603; cursor:pointer }
     li {
       float:left; list-style:none; text-align:center; margin-right:22px; position:relative;
       > a {
-        font-weight:bold; font-size:12px; display:block;
+        font-size:12px; display:block;
         img {height:24px; max-width:24px; float:left; margin-right:8px}
         span { display:block; margin-top:5px; float:left }
       }
@@ -90,8 +90,8 @@ a { text-decoration:none; outline-style:none; color:#B45603; cursor:pointer }
   li { 
     background: -moz-linear-gradient(center top, #fff, #eee); background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
     padding:14px 16px; overflow:hidden; margin:0 0 14px; border-radius:5px; box-shadow:0 2px 6px -4px #000;
-    a {color:#b45603; font-weight:bold; font-family:arial rounded mt bold }
-    .repo_name { float:left; display:block; margin-top:2px }
+    a {color:#b45603}
+    .repo_name { float:left; display:block }
     .edit_repo { float:right; background:url(/assets/pin_16.png) no-repeat; width:16px; height:16px; display:block; text-indent:-9999px }
     .repo_github_url { float:right; background:url(/assets/details_16.png) no-repeat; width:16px; height:16px; display:block; text-indent:-9999px; margin-right:15px }
   }
@@ -116,12 +116,12 @@ line-height:17px; background:#d0bfaa; border-color:#FFF8E8; border-style:none no
     border-radius:5px; margin-bottom:14px; box-shadow:0 2px 6px -2px #888;
     background: -moz-linear-gradient(center top, #fff, #eee); background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
     padding:15px;  border-top:1px solid #ddd;
-    b { color:#EA0A89 }
+    span { color:#EA0A89 }
   }
 }
 
 .pagination {
-  width:620px; margin:40px auto; text-align:center; color:#fff !important; font-weight:bold; font-size:14px; text-shadow:0 1px 1px #000;
+  width:620px; margin:40px auto; text-align:center; color:#fff !important; text-shadow:0 1px 1px #000;
   * { margin:0 4px }
   a { color:#fff }
   .current { background:#614b33; font-style:normal !important; text-shadow:0 0 0; padding:2px 6px; border-radius:3px; border:1px solid #55320d;
@@ -146,7 +146,7 @@ line-height:17px; background:#d0bfaa; border-color:#FFF8E8; border-style:none no
   position:absolute; top:0; right:0; padding:3px 7px; color:#fff; background:rgba(0, 0, 0, 0.3);
   li { 
     float:left; margin-right:12px;
-    a { margin-top:4px; display:block; text-shadow:0 2px 1px #000; color:#fff; font-family:lucida sans; font-size:11px; text-transform:uppercase }
+    a { margin-top:4px; display:block; text-shadow:0 2px 1px #000; color:#fff; font-size:11px }
   }
   li:last-child { margin:0 }
   .user_photo { border:1px solid #fff; width:20px; box-shadow:0 1px 1px #222 }
@@ -174,8 +174,8 @@ line-height:17px; background:#d0bfaa; border-color:#FFF8E8; border-style:none no
 #tags_list {
   margin:8px 0;
   .tag_label {
-    float:left; margin:0 6px 6px 0; background: #fec500; padding: 3px 5px 6px; border: 1px solid #957400; color: #fff; line-height:12px;
-    -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; 
+    float:left; margin:0 10px 10px 0; background: #fec500; padding: 6px 5px; border: 1px solid #957400; color: #fff; line-height:12px;
+    border-radius:4px;
     background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2)));
     background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));

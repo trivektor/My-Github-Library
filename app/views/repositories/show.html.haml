@@ -6,48 +6,48 @@
   .content
     %ul.repo_info_list
       %li 
-        %b Repo's name:
+        %span Repo's name:
         = @repository.name
       
       %li 
-        %b Description on Github: 
+        %span Description on Github: 
         = @repository.description
         
       %li
-        %b Your personal description of this repo:
+        %span Your personal description of this repo:
         = @repository.personal_description.blank? ? "Not written yet" : @repository.personal_description
         
       %li
-        %b Size:
+        %span Size:
         = (@repository.size/1024.0).round(2)
         MB
         
       %li
-        %b Language:
+        %span Language:
         = @repository.language
         
       %li
-        %b Owner:
+        %span Owner:
         %a{:href => "http://github.com/#{@repository.owner}", :target => "blank"}= @repository.owner
         
       %li
-        %b Homepage:
+        %span Homepage:
         %a{:href => @repository.homepage, :target => "blank"}= @repository.homepage
       
       %li
-        %b Watchers:
+        %span Watchers:
         = @repository.watchers
         
       %li
-        %b Forks:
+        %span Forks:
         = @repository.forks
         
       %li
-        %b Wiki:
+        %span Wiki:
         = @repository.has_wiki? ? "Yes" : "No"
         
       %li
-        %b Has download:
+        %span Has download:
         = @repository.has_downloads? ? "Yes" : "No"
         
     = link_to "Add tags and personal description", edit_repository_path(@repository), :class => :action_button
