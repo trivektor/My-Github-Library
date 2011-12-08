@@ -17,18 +17,16 @@ class User < ActiveRecord::Base
   def self.find_for_github_oauth(access_token, signed_in_resource=nil)
     data = access_token['extra']['user_hash']
     
-    puts data.inspect
-    
-    if user = User.find_by_email(data["email"])
+    if user = User.find_by_email(data['email'])
       user
-    else 
-      # Create a user with a stub password. 
-      pwd = Devise.friendly_token[0,20]
+    else       
+      email = data['email']
+      email = self.generate_email(data['login']) if email.blank?
+      
       user = User.create(
         :username     => data['login'],
-        :email        => data['email'], 
-        :password     => pwd,
-        :password_confirmation     => pwd
+        :email        => email, 
+        :password     => Devise.friendly_token[0,20],
       )
       
       user.create_profile({
@@ -48,6 +46,10 @@ class User < ActiveRecord::Base
       
       user
     end
+  end
+  
+  def self.generate_email(login)
+    "github-#{login}@mgl305.com"
   end
   
 end

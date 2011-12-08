@@ -2,6 +2,6 @@
   %ul#username_pane
     %li= image_tag current_user.gravatar_url, :class => :user_photo
     %li 
-      %a= current_user.email
+      %a{:href => "http://github.com/#{current_user.username}", :target => "_blank"}= current_user.username
     %li
       = link_to "Logout", destroy_user_session_path, :method => :delete
